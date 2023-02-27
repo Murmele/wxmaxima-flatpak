@@ -1,7 +1,17 @@
+#name: gnuplot
+#sources:
+#  - type: git
+#    url: https://github.com/gnuplot/gnuplot.git
+#    tag: 5.5
+#post-install:
+#  - install -p -D -m 0644 "Copyright" -t "${FLATPAK_DEST}/share/licenses/gnuplot/";
+
 name: gnuplot
 sources:
   - type: archive
-    url: https://downloads.sourceforge.net/gnuplot/gnuplot-5.2.7.tar.gz
-    sha256: 97fe503ff3b2e356fe2ae32203fc7fd2cf9cef1f46b60fe46dc501a228b9f4ed
-post-install:
-  - install -p -D -m 0644 "Copyright" -t "${FLATPAK_DEST}/share/licenses/gnuplot/";
+    url: https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.5/gnuplot-5.4.5.tar.gz
+    sha256: 66f679115dd30559e110498fc94d926949d4d370b4999a042e724b8e910ee478
+    x-checker-data:
+      type: anitya
+      project-id: 1216
+      url-template: https://sourceforge.net/projects/gnuplot/files/gnuplot/$version/gnuplot-$version.tar.gz

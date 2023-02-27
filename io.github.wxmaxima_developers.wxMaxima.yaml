@@ -1,6 +1,6 @@
 app-id: io.github.wxmaxima_developers.wxMaxima
 runtime: org.gnome.Platform
-runtime-version: '3.32'
+runtime-version: '43'
 sdk: org.gnome.Sdk
 command: wxmaxima
 finish-args:
@@ -23,10 +23,3 @@ finish-args:
   - --device=dri
 modules:
   - wxMaxima.yaml
-cleanup:
-  - /include
-  - /lib/pkgconfig
-  - /share/bash-completion
-  - /share/man
-  - '*.a'
-  - '*.la'

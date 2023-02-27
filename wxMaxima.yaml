@@ -1,10 +1,12 @@
 name: wxMaxima
 buildsystem: cmake-ninja
 builddir: true
+# TODO: why it has to be disabled??
+config-opts: [-DWXM_DISABLE_WEBVIEW=ON]
 sources:
-  - type: archive
-    url: https://github.com/wxMaxima-developers/wxmaxima/archive/Version-19.08.1.tar.gz
-    sha256: 9e8dce440f085d795e9829708e575df15f6bcf124940669d6786494ef71b54c3
+  - type: git
+    url: https://github.com/wxMaxima-developers/wxmaxima.git
+    tag: Version-23.02.1
 post-install:
   - |
     icon_in="../data/${FLATPAK_ID}.svg";
@@ -18,5 +20,5 @@ post-install:
 modules:
   - wxwidgets.yaml
   - maxima.yaml
-  - jsmath-fonts.yaml
-  - doxygen.yaml
+  #- jsmath-fonts.yaml
+  #- doxygen.yaml
